@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const front = document.querySelectorAll('.front');
   const container = document.querySelector('.card-container');
   const score = document.querySelector('.score span');
-  const restartButton = document.querySelector('.restart');
 
 
   document.querySelector('.start').addEventListener('click', function () {
