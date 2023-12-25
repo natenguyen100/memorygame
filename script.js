@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelector('.start').addEventListener('click', function () {
     document.querySelector('.screen').style.display = 'none';
     document.querySelector('.game-screen').style.display = 'block';
-    restartGame();
   });
 
   reloadButton.addEventListener('click', function () {
@@ -52,10 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
   function match(cardOne, cardTwo) {
     if (cardOne.dataset.index === cardTwo.dataset.index) {
         score.innerHTML = parseInt(score.innerHTML) + 1;
-
         cardOne.classList.remove('flip');
         cardTwo.classList.remove('flip');
-
         cardOne.classList.add('match');
         cardTwo.classList.add('match');
 
@@ -63,12 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
                 alert("You Won!");
             }, 500);
-        }
-
-        if (document.querySelectorAll('.match').length === card.length) {
-            setTimeout(function() {
-                restartGame();
-            }, 1000);
         }
     } else {
         setTimeout(function() {
