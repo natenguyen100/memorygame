@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const front = document.querySelectorAll('.front');
   const container = document.querySelector('.card-container');
   const score = document.querySelector('.score span');
+  const reloadButton = document.querySelector('.restart');
 
 
   document.querySelector('.start').addEventListener('click', function () {
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     restartGame();
   });
 
-  restartButton.addEventListener('click', function () {
+  reloadButton.addEventListener('click', function () {
     location.reload();
   });
 
